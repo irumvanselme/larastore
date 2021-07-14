@@ -27,7 +27,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(["prefix" => "admin"], function () {
+Route::group(["prefix" => "admin", "middleware" => ["auth", "admin"]], function () {
     Route::get("/", [AppController::class, "index"]);
 
     Route::group(["prefix" => "/orders"], function () {
