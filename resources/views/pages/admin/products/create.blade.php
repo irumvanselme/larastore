@@ -16,11 +16,15 @@
                     <div class="col-6">
                         <div class="card p-4">
                             <x-form-select name="category" label="Category" placeholder=" - select category - " :iterable="$categories"></x-form-select>
-                            <x-form-control name="vender" label="Vendor" placeholder="eg: Nike"></x-form-control>
+                            <x-form-control name="vendor" label="Vendor" placeholder="eg: Nike"></x-form-control>
+                        </div>
+                        <div class="card mt-4 p-4">
+                            <x-form-control name="price" label="Price" placeholder="What should be show on site"></x-form-control>
+                            <x-form-control name="cost" label="Cost" placeholder="This is hidden to other users"></x-form-control>
                         </div>
                     </div>
                 </div>
-                <div class="mt-4">
+                <div>
                     <button class="btn btn-primary" type="submit">Create</button>
                 </div>
             </form>
