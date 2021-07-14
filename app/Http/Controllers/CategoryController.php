@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -23,6 +24,8 @@ class CategoryController extends Controller
             "name" => "required|string|min:3"
         ]);
 
-        dd($data);
+        $category = Category::query()->create($data);
+
+        return redirect("/admin/categories");
     }
 }
