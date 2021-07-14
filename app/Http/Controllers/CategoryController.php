@@ -24,7 +24,7 @@ class CategoryController extends Controller
             "name" => "required|string|min:3"
         ]);
 
-        $category = Category::query()->create($data);
+        Category::query()->create($data);
 
         return redirect("/admin/categories");
     }
