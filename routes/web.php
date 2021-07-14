@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AppController;
 use App\Http\Controllers\CategoryController;
 
 /*
@@ -22,6 +23,22 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::group(["prefix" => "/admin/categories"], function () {
-    Route::get("/", [CategoryController::class, "index"]);
+Route::group(["prefix" => "admin"], function () {
+    Route::get("/", [AppController::class, "index"]);
+    Route::group(["prefix" => "/orders"], function () {
+        Route::get("/", [CategoryController::class, "index"]);
+    });
+    Route::group(["prefix" => "/products"], function () {
+        Route::get("/", [CategoryController::class, "index"]);
+    });
+    Route::group(["prefix" => "/customers"], function () {
+        Route::get("/", [CategoryController::class, "index"]);
+    });
+    Route::group(["prefix" => "/categories"], function () {
+        Route::get("/", [CategoryController::class, "index"]);
+    });
+    Route::group(["prefix" => "/tags"], function () {
+        Route::get("/", [CategoryController::class, "index"]);
+    });
+    Route::get("/analytics", [AppController::class, "analytics"]);
 });
