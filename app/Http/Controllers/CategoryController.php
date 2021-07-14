@@ -9,7 +9,9 @@ use Illuminate\Validation\ValidationException;
 class CategoryController extends Controller
 {
     public function index(){
-        return view("pages.admin.categories.index");
+        $categories = Category::all();
+
+        return view("pages.admin.categories.index", compact("categories"));
     }
 
     public function create(){
