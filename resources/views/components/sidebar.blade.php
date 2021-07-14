@@ -1,3 +1,5 @@
 <div style="background-color:#fff;">
-    I am the sidebar
+    <div>
+        <h2>Larastore</h2>
+    </div>
 </div>

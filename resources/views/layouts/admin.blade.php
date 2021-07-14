@@ -14,7 +14,9 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -22,12 +24,12 @@
 <body>
 <div id="app">
     <div class="row mx-0">
-        <div class="col-2 shadow bg-white vh-100">
+        <div class="col-2 shadow bg-white vh-100 border-right">
             @include("components.sidebar")
         </div>
         <div class="col-10 px-0">
             @include("components.navbar")
-            <main>
+            <main class="p-2">
                 @yield('content')
             </main>
         </div>
