@@ -2,7 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\TagController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,19 +30,19 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(["prefix" => "admin"], function () {
     Route::get("/", [AppController::class, "index"]);
     Route::group(["prefix" => "/orders"], function () {
-        Route::get("/", [CategoryController::class, "index"]);
+        Route::get("/", [OrderController::class, "index"]);
     });
     Route::group(["prefix" => "/products"], function () {
-        Route::get("/", [CategoryController::class, "index"]);
+        Route::get("/", [ProductController::class, "index"]);
     });
     Route::group(["prefix" => "/customers"], function () {
-        Route::get("/", [CategoryController::class, "index"]);
+        Route::get("/", [CustomerController::class, "index"]);
     });
     Route::group(["prefix" => "/categories"], function () {
         Route::get("/", [CategoryController::class, "index"]);
     });
     Route::group(["prefix" => "/tags"], function () {
-        Route::get("/", [CategoryController::class, "index"]);
+        Route::get("/", [TagController::class, "index"]);
     });
     Route::get("/analytics", [AppController::class, "analytics"]);
 });
