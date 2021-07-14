@@ -2,6 +2,6 @@
 
 @section("content")
     <div>
-        I am the categories management page
+        I am the index customers page
     </div>
 @endsection
