@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string("title")->unique();
             $table->text("description");
-            $table->string("status");
+            $table->enum("status", ["ACTIVE", "DRAFT"]);
             $table->string("vendor");
             $table->double("price");
             $table->double("cost");
