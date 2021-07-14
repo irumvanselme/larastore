@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\View\Components\Forms\Input;
+use App\View\Components\Forms\TextArea;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,5 +27,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::component("form-control", Input::class);
+        Blade::component("form-textarea", TextArea::class);
     }
 }

@@ -36,6 +36,8 @@ Route::group(["prefix" => "admin"], function () {
 
     Route::group(["prefix" => "/products"], function () {
         Route::get("/", [ProductController::class, "index"]);
+        Route::get("/new", [ProductController::class, "create"]);
+        Route::post("/store", [ProductController::class, "store"]);
     });
 
     Route::group(["prefix" => "/customers"], function () {
