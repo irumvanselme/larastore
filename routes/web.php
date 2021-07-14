@@ -29,22 +29,30 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(["prefix" => "admin"], function () {
     Route::get("/", [AppController::class, "index"]);
+
     Route::group(["prefix" => "/orders"], function () {
         Route::get("/", [OrderController::class, "index"]);
     });
+
     Route::group(["prefix" => "/products"], function () {
         Route::get("/", [ProductController::class, "index"]);
     });
+
     Route::group(["prefix" => "/customers"], function () {
         Route::get("/", [CustomerController::class, "index"]);
     });
+
     Route::group(["prefix" => "/categories"], function () {
         Route::get("/", [CategoryController::class, "index"]);
         Route::get("/new", [CategoryController::class, "create"]);
         Route::post("/store", [CategoryController::class, "store"]);
     });
+
     Route::group(["prefix" => "/tags"], function () {
         Route::get("/", [TagController::class, "index"]);
+        Route::get("/new", [TagController::class, "create"]);
+        Route::post("/store", [TagController::class, "store"]);
     });
+
     Route::get("/analytics", [AppController::class, "analytics"]);
 });
