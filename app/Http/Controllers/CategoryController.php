@@ -3,10 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class CategoryController extends Controller
 {
     public function index(){
         return view("pages.admin.categories.index");
+    }
+
+    public function create(){
+        return view("pages.admin.categories.create");
+    }
+
+    /**
+     * @throws ValidationException
+     */
+    public function store(Request $request){
+        $data = $this->validate($request, [
+            "name" => "required|string|min:3"
+        ]);
+
+        dd($data);
     }
 }

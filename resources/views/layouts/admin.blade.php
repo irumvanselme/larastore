@@ -30,7 +30,7 @@
         </div>
         <div class="col-10 px-0">
             @include("components.navbar")
-            <main class="p-2">
+            <main class="p-4">
                 @yield('content')
             </main>
         </div>

@@ -40,6 +40,8 @@ Route::group(["prefix" => "admin"], function () {
     });
     Route::group(["prefix" => "/categories"], function () {
         Route::get("/", [CategoryController::class, "index"]);
+        Route::get("/new", [CategoryController::class, "create"]);
+        Route::post("/store", [CategoryController::class, "store"]);
     });
     Route::group(["prefix" => "/tags"], function () {
         Route::get("/", [TagController::class, "index"]);
