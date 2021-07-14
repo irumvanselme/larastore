@@ -10,13 +10,44 @@ use Illuminate\View\Component;
 class Select extends Component
 {
     /**
+     * The input name.
+     *
+     * @var string
+     */
+    public $name;
+
+    /**
+     * The input label.
+     *
+     * @var string
+     */
+    public $label;
+
+    /**
+     * The input placeholder.
+     *
+     * @var string
+     */
+    public $placeholder;
+
+    /**
+     * The select iterable
+     *
+     * @var array
+     */
+    public $iterable;
+
+    /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($name, $label, $placeholder, $iterable)
     {
-        //
+        $this->name = $name;
+        $this->label = $label;
+        $this->placeholder = $placeholder;
+        $this->iterable = $iterable;
     }
 
     /**

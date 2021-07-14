@@ -15,6 +15,7 @@
                     </div>
                     <div class="col-6">
                         <div class="card p-4">
+                            <x-form-select name="category" label="Category" placeholder=" - select category - " :iterable="$categories"></x-form-select>
                             <x-form-control name="vender" label="Vendor" placeholder="eg: Nike"></x-form-control>
                         </div>
                     </div>
