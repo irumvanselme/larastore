@@ -1,3 +1,11 @@
+.sidebar-link-a {
+    color: black;
+}
+.sidebar-link-a:hover {
+    color: black;
+    text-decoration: none;
+}
+
 .sidebar-link {
     transition: .1s ease-in;
     cursor: pointer;
