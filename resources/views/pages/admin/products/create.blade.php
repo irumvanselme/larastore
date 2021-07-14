@@ -9,8 +9,13 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="card p-4">
-                            <x-form-control name="name" label="Title"></x-form-control>
+                            <x-form-control name="name" label="Title" placeholder="eg: A cool t-shirt"></x-form-control>
                             <x-form-textarea name="description" label="Description"></x-form-textarea>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card p-4">
+                            <x-form-control name="vender" label="Vendor" placeholder="eg: Nike"></x-form-control>
                         </div>
                     </div>
                 </div>

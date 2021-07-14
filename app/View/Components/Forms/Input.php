@@ -24,14 +24,22 @@ class Input extends Component
     public $label;
 
     /**
+     * The input placeholder.
+     *
+     * @var string
+     */
+    public $placeholder;
+
+    /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $label)
+    public function __construct($name, $label, $placeholder)
     {
         $this->name = $name;
         $this->label = $label;
+        $this->placeholder = $placeholder;
     }
 
     /**
