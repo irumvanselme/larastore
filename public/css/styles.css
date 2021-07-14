@@ -1,6 +1,7 @@
 .sidebar-link {
     transition: .1s ease-in;
     cursor: pointer;
+    margin-top: 3px;
 }
 
 .sidebar-link:hover {
