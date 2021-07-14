@@ -4,7 +4,7 @@
         {{ old($name) }}
     </textarea>
     @error($name)
-    <span class="invalid-feedback" role="alert">
+    <span class="invalid-feedback font-weight-light" role="alert">
             <strong>{{ $message }}</strong>
         </span>
     @enderror
